@@ -15,11 +15,15 @@ while True:
     
     delta_frame = cv2.absdiff(first_frame, gray)
 
+    thresh_delta = cv2.threshold(delta_frame, 30, 255, cv2.THRESH_BINARY)[1]
+
     cv2.imshow("Grey Frame", gray)
     cv2.imshow("Delta Frame", delta_frame)
+    cv2.imshow("Threshold Frame", thresh_delta)
 
     key = cv2.waitKey(1)  # Adding some waiting time between frames (adjusting FPS)
     print(gray) 
+    print(delta_frame)
 
     if key == ord("q"):  # To stop video press "q"
         break
