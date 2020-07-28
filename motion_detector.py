@@ -13,9 +13,11 @@ while True:
         first_frame = gray
         continue
     
-        
+    delta_frame = cv2.absdiff(first_frame, gray)
 
-    cv2.imshow("Capturing", gray)
+    cv2.imshow("Grey Frame", gray)
+    cv2.imshow("Delta Frame", delta_frame)
+
     key = cv2.waitKey(1)  # Adding some waiting time between frames (adjusting FPS)
     print(gray) 
 
