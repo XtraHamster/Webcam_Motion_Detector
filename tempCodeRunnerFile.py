@@ -1,0 +1,1 @@
+p.ygrid[0].ticker.desired_num_ticks=1
